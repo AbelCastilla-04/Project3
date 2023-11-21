@@ -292,3 +292,10 @@ iframe {
 #ability4:hover {
 	transform: translate(-10px)
 }
+
+/* Maps */
+
+#map {
+  height: 600px;
+  width: 800px;
+}
