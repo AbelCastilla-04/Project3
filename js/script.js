@@ -1,27 +1,30 @@
-// Initialize and add the map
 let map;
 
 async function initMap() {
-  // The location of Uluru
-  const position = { lat: -25.344, lng: 131.031 };
-  // Request needed libraries.
-  //@ts-ignore
   const { Map } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+  const position = { lat: 41.879225773615225, lng: -87.63601470046225 };
 
-  // The map, centered at Uluru
   map = new Map(document.getElementById("map"), {
-    zoom: 4,
+    zoom: 15,
     center: position,
-    mapId: "DEMO_MAP_ID",
   });
 
-  // The marker, positioned at Uluru
-  const marker = new AdvancedMarkerElement({
+  
+  marker = new google.maps.Marker({
     map: map,
     position: position,
-    title: "Uluru",
+	icon: "image/sears.jpg",
+	animation: google.maps.Animation.BOUNCE,
+    title: "Sears Tower",
   });
+  
+  var infoWindow = new google.maps.InfoWindow({
+	content:"<p>Sears Tower was the largest building in the world in 1974</p>"
+  })
+  
+  marker.addListener("click", function(){
+	  infoWindow.open(map, marker);
+  
 }
 
 initMap();
