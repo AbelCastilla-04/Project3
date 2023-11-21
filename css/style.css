@@ -87,6 +87,7 @@
   
   #main-navbar2 ul li {
   display: inline;
+  }
   
   p {
     font-size: 25px;
@@ -99,9 +100,7 @@
   #len img {
   width: 200px;
   height: 200px;
-}
-
-  
+  }
 }
 
 /* Index */
