@@ -80,13 +80,28 @@
   text-decoration: none;
 }
 
-@media screen and (min-width: 0px) and (max-width: 700px){
-  #whole{
-    margin: 0px; 
-  }
+@media screen and (min-width: 400px) and (max-width: 700px){
   #all{
-	background-color: white;
+    background-color: white;
   }
+  
+  #main-navbar2 ul li {
+  display: inline;
+  
+  p {
+    font-size: 25px;
+  }
+  
+  #skill {
+	text-align: left;  
+  }
+  
+  #len img {
+  width: 200px;
+  height: 200px;
+}
+
+  
 }
 
 /* Index */
