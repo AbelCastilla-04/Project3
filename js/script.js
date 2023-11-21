@@ -11,7 +11,6 @@ async function initMap() {
 
   
   marker = new google.maps.Marker({
-    map: map,
     position: position,
 	icon: "image/sears.jpg",
 	animation: google.maps.Animation.BOUNCE,
