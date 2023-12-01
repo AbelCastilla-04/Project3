@@ -38,7 +38,7 @@
   width: 25%;
   color: black;
 }
-#main-navbar1 ul {
+#main-navbar1 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -47,7 +47,7 @@
   overflow: hidden;
 }
 
-#main-navbar2 ul {
+#main-navbar2 {
   list-style-type: none;
   padding: 0;
   margin: 0;
