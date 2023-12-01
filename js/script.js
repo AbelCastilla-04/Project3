@@ -8,7 +8,6 @@ async function initMap() {
     zoom: 15,
     center: position,
   });
-
   
   marker = new google.maps.Marker({
     position: position,
@@ -17,13 +16,16 @@ async function initMap() {
     title: "Sears Tower",
   });
   
-  var infoWindow = new google.maps.InfoWindow({
-	content:"<p>Sears Tower was the largest building in the world in 1974</p>"
-  })
+  const constString = "Sears Tower was the largest building in the world in 1974"
+  const infoWindow = new google.maps.InfoWindow({
+	content: constString,
+  });
   
   marker.addListener("click", function(){
-	  infoWindow.open(map, marker);
-  }
-}
+	infoWindow.open({
+      anchor: marker,
+      map,
+    });
+  });
 
 initMap();
