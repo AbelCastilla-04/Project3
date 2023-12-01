@@ -8,24 +8,41 @@ async function initMap() {
     zoom: 15,
     center: position,
   });
-  
-  marker = new google.maps.Marker({
-    position: position,
-	icon: "image/sears.jpg",
-	animation: google.maps.Animation.BOUNCE,
-    title: "Sears Tower",
-  });
-  
-  const constString = "Sears Tower was the largest building in the world in 1974"
-  const infoWindow = new google.maps.InfoWindow({
-	content: constString,
-  });
-  
-  marker.addListener("click", function(){
-	infoWindow.open({
-      anchor: marker,
+
+   setMarkers(map);
+}
+
+const buildings = [
+  ["City Hall", -34.028249, 151.157507, 3],
+  ["Cloud Gate", -33.80010128657071, 151.28747820854187, 2],
+  ["Sears Tower", -33.950198, 151.259302, 1],
+];
+
+function setMarkers(map) {
+  const image = {
+    url: "image/sears.jpg",
+    size: new google.maps.Size(20, 32),
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(0, 32),
+  };
+
+  const shape = {
+    coords: [1, 1, 1, 20, 18, 20, 18, 1],
+    type: "poly",
+  };
+
+  for (let i = 0; i < beaches.length; i++) {
+    const buildings = beaches[i];
+
+    new google.maps.Marker({
+      position: { lat: buildings[1], lng: buildings[2] },
       map,
+      icon: image,
+      shape: shape,
+      title: buildings[0],
+      zIndex: buildings[3],
     });
-  });
+  }
+  
 }
 initMap();
