@@ -8,33 +8,31 @@ async function initMap() {
     zoom: 15,
     center: position,
   });
-
-   setMarkers(map);
-}
-
-const buildings = [
-  ["City Hall", 41.88379084951497, -87.63202952023772, 3],
-  ["Cloud Gate", 41.882689151051935, -87.62329853558197, 2],
-  ["Sears Tower", 41.87892532348633, -87.63587951660156, 1],
-];
-
-function setMarkers(map) {
-  const image = {
-    url: "image/sears.jpg",
-  };
-
-  for (let i = 0; i < beaches.length; i++) {
-    const buildings = beaches[i];
-
-    new google.maps.Marker({
-      position: { lat: buildings[1], lng: buildings[2] },
-      map,
-      icon: image,
-      shape: shape,
-      title: buildings[0],
-      zIndex: buildings[3],
-    });
-  }
   
+  const buildings = [
+    [{ lat: 41.88379084951497, lng: -87.63202952023772 }, "City Hall"],
+    [{ lat: 41.882689151051935, lng: -87.62329853558197 }, "Cloud Gate"],
+    [{ lat: 41.87892532348633, lng: -87.63587951660156 }, "Sears Tower"],
+  ];
+ 
+  const infoWindow = new google.maps.InfoWindow();
+
+ 
+  buildings.forEach(([position, title], i) => {
+    const marker = new google.maps.Marker({
+      position,
+      map,
+      title: `${i + 1}. ${title}`,
+      label: `${i + 1}`,
+      optimized: false,
+    });
+
+    // Add a click listener for each marker, and set up the info window.
+    marker.addListener("click", () => {
+      infoWindow.close();
+      infoWindow.setContent(marker.getTitle());
+      infoWindow.open(marker.getMap(), marker);
+    });
+  });
 }
 initMap();
