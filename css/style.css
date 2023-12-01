@@ -38,6 +38,7 @@
   width: 25%;
   color: black;
 }
+
 #main-navbar1 {
   list-style-type: none;
   padding: 0;
@@ -59,11 +60,13 @@
 #main-navbar1 ul li {
   margin: 15px;
   display: inline-block;
+  text-align: center;
 }
 
 #main-navbar2 ul li {
   margin: 15px;
   display: inline-block;
+  text-align: center;
 }
 	
 
