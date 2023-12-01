@@ -315,6 +315,7 @@ iframe {
 /* Maps */
 
 #map {
+  padding: 10px;
   height: 600px;
   width: 800px;
   margin-left: auto;
