@@ -2,7 +2,7 @@ let map;
 
 async function initMap() {
   const { Map } = await google.maps.importLibrary("maps");
-  const position = { lat: 41.879225773615225, lng: -87.63601470046225 };
+  const position = { lat: 41.87892532348633, lng: -87.63587951660156 };
 
   map = new Map(document.getElementById("map"), {
     zoom: 15,
