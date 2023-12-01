@@ -2,11 +2,11 @@ let map;
 
 async function initMap() {
   const { Map } = await google.maps.importLibrary("maps");
-  const position = { lat: 41.87892532348633, lng: -87.63587951660156 };
+  const loc = { lat: 41.87892532348633, lng: -87.63587951660156 };
 
   map = new Map(document.getElementById("map"), {
     zoom: 15,
-    center: position,
+    center: loc,
   });
   
   const buildings = [
@@ -27,7 +27,6 @@ async function initMap() {
       optimized: false,
     });
 
-    // Add a click listener for each marker, and set up the info window.
     marker.addListener("click", () => {
       infoWindow.close();
       infoWindow.setContent(marker.getTitle());
