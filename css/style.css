@@ -64,7 +64,7 @@
 #main-navbar1 ul li a {
   color: navy;
   background-color: lightblue;
-  display: block;
+  display: inline;
   font-size: 20px;
   text-align: center;
   margin: 5px;
@@ -75,7 +75,7 @@
 #main-navbar2 ul li a {
   color: white;
   background-color: rgb(210,145,255);
-  display: block;
+  display: inline;
   font-size: 20px;
   text-align: center;
   margin: 5px;
