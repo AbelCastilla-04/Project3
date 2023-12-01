@@ -38,41 +38,47 @@
   width: 25%;
   color: black;
 }
-#main-navbar1 {
-  background-color: lightblue;
-  font-size: 20px;
-  text-align: center;
-  width: 100%;
+#main-navbar1 ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   overflow: hidden;
 }
 
-#main-navbar2 {
-  background-color: rgb(210,145,255);
-  font-size: 20px;
-  text-align: center;
-  width: 100%;
+#main-navbar2 ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   overflow: hidden;
-}
-
-#main-navbar1 a {
-  color: navy;
-  margin: 5px;
-  text-decoration: none;
 }
 
 #main-navbar1 ul li {
-	text-decoration: none;
-	display: inline;
+  margin: 15px;
 }
 
-#main-navbar2 a {
-  color: white;
+#main-navbar2 ul li {
+  margin: 15px;
+}
+	
+
+#main-navbar1 ul li a {
+  color: navy;
+  background-color: lightblue;
+  display: block;
+  font-size: 20px;
+  text-align: center;
   margin: 5px;
   text-decoration: none;
 }
 
-#main-navbar2 ul li {
-  display: inline;
+
+#main-navbar2 ul li a {
+  color: white;
+  background-color: rgb(210,145,255);
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  margin: 5px;
   text-decoration: none;
 }
 
