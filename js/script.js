@@ -10,9 +10,9 @@ async function initMap() {
   });
   
   const buildings = [
-    [{ lat: 41.88379084951497, lng: -87.63202952023772 }, "City Hall"],
-    [{ lat: 41.882689151051935, lng: -87.62329853558197 }, "Cloud Gate"],
-    [{ lat: 41.87892532348633, lng: -87.63587951660156 }, "Sears Tower"],
+    [{ lat: 41.88379084951497, lng: -87.63202952023772 }, "City Hall - Built in 1911"],
+    [{ lat: 41.882689151051935, lng: -87.62329853558197 }, "Cloud Gate - Made by Anish Kapoor"],
+    [{ lat: 41.87892532348633, lng: -87.63587951660156 }, "Sears Tower - Tallest tower in 1974"],
   ];
  
   const infoWindow = new google.maps.InfoWindow();
