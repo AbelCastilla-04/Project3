@@ -21,14 +21,6 @@ const buildings = [
 function setMarkers(map) {
   const image = {
     url: "image/sears.jpg",
-    size: new google.maps.Size(20, 32),
-    origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(0, 32),
-  };
-
-  const shape = {
-    coords: [1, 1, 1, 20, 18, 20, 18, 1],
-    type: "poly",
   };
 
   for (let i = 0; i < beaches.length; i++) {
